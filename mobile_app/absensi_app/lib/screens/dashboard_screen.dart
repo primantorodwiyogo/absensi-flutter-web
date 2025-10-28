@@ -7,27 +7,14 @@ class DashboardScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Dashboard Absensi'),
-        centerTitle: true,
+        title: const Text("Dashboard Absensi"),
+        backgroundColor: Colors.indigo,
+        foregroundColor: Colors.white,
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            const Text(
-              'Selamat Datang di Dashboard!',
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-            ),
-            const SizedBox(height: 40),
-            ElevatedButton(
-              onPressed: () {
-                ScaffoldMessenger.of(context).showSnackBar(
-                  const SnackBar(content: Text('Fitur Absen akan datang!')),
-                );
-              },
-              child: const Text('Absen Masuk'),
-            ),
-          ],
+      body: const Center(
+        child: Text(
+          "Selamat datang di Dashboard!",
+          style: TextStyle(fontSize: 20),
         ),
       ),
     );
